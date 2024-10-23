@@ -33,14 +33,16 @@ const regex = /\b([2-7]{1,5})([MTN])([1-7]{1,7})\b/gm;
 elementos.forEach((el) => {
   if (el.textContent.match(regex)) {
     el.innerHTML = el.innerText.replace(regex, (match, dia, turno, hora) => {
-      const dias = dia
-        .split("")
-        .map((d) => diaSem[d])
-        .join("|");
-
+      let r = "";
       let inicio = horarios[`${turno}${hora.charAt(0)}`].com;
       let fim = horarios[`${turno}${hora.charAt(hora.length - 1)}`].ter;
-      return `${dias} : ${inicio}-${fim}`;
+      const d2 = dia.split("").map((d) => diaSem[d]);
+
+      d2.forEach((d) => {
+        r += `${d} : ${inicio}-${fim} <br>`;
+      });
+
+      return r;
     });
   }
 });
