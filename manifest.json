@@ -1,19 +1,19 @@
 {
-    "name": "Sigaa horario changer",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions": [
-        "scripting",
-        "activeTab"
-    ],
-    "host_permissions": [
-        "https://sigaa.unb.br/*"
-    ],
-    "description": "Arruma horario Sigaa",
-    "content_scripts": [
-        {
-            "matches": ["https://sigaa.unb.br/*"],
-            "js": ["content.js"]
-        }
-    ]
+  "name": "Sigaa horario changer",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://sigaa.unb.br/*"],
+  "description": "Arruma horario Sigaa",
+  "content_scripts": [
+    {
+      "matches": ["https://sigaa.unb.br/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "unb.png",
+    "48": "unb.png",
+    "128": "unb.png"
+  }
 }
