@@ -46,7 +46,3 @@ elementos.forEach((el) => {
     });
   }
 });
-
-Array.from(document.querySelectorAll("tHead th"))
-  .filter((col) => col.innerText.includes("Horário"))
-  .forEach((col) => (col.width = "fit-content"));
